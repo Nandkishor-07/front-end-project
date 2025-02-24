@@ -1,0 +1,65 @@
+
+:root {
+  --color: blue;
+  --black: #000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  h1 {
+    font-size: 30px;
+    text-align: center;
+    border-bottom: 1px solid red;
+    padding: 20px;
+    box-shadow: 1px 1px;
+    margin: 0;
+  }
+}
+
+.countcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: beige;
+  max-width: 500px;
+  margin: 50px auto;
+  gap: 20px;
+  padding: 50px 0;
+  span {
+    font-size: 30px;
+  }
+  .buttons {
+    button {
+      background-color: green;
+      padding: 10px 20px;
+      color: #fff;
+      &:last-child {
+        background-color: red;
+      }
+    }
+  }
+  .dialog {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    label {
+      color: var(--color);
+    }
+    input {
+      display: block;
+      width: 200px;
+      padding: 10px;
+      border: 1px solid var(--black);
+      border-radius: 10px;  
+    }
+  }
+  button {
+    background-color: black;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer ;
+  }
+}

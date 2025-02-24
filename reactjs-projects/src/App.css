@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+button {
+  border: 1px solid black;
+  padding: 20px;
+  background: green;
+  margin: 0px 10px;
+  cursor: pointer;
+  min-width: 120px;
+  color: white;
+}
+
+.countercontainer {
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  gap: 30px;
+  justify-content: center;
+  text-align: center;
+  margin: 100px auto;
+  flex-direction: column;
+  background-color: pink;
+}
+
+input {
+  border: 1px solid #000;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.inputfield {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <link rel="preload" type="text/css" as="style"  href="css/style.css" onload="this.onload=null;this.rel='stylesheet'">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script type="module" src="typescript/app.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Counter App</h1>
+    </header>
+    <main>
+        <div class="countcontainer">
+            <span class="counter text-4xl">0</span>
+            <div class="buttons">
+                <button class="increment">+</button>
+                <button class="decrement">-</button>
+            </div>
+            <div class="dialog">
+                <label class="text-[16px]" for="">Increament By Value :</label>
+                <input class="incrementbtn text-[12px]" type="number" max="10" min="1" name="" id="incrementbtn" placeholder="Type number for increment" value="0">
+            </div>
+            <button class="reset">Reset</button>
+        </div>
+    </main>
+
+</body>
+
+</html>
