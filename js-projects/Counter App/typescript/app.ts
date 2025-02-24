@@ -1,25 +1,31 @@
-export {};
-let message: string = "Hello, TypeScript!";
-console.log(message);
+document.addEventListener("DOMContentLoaded", function () {
+  var counter = document.querySelector(".counter") as HTMLSpanElement;
+  var increament = document.querySelector(".increment") as HTMLButtonElement;
+  var decreament = document.querySelector(".decrement") as HTMLButtonElement;
+  var incrementBynum = document.getElementById(
+    "incrementbtn"
+  ) as HTMLInputElement;
+  var reset = document.querySelector(".reset") as HTMLButtonElement;
 
-let myname: string = "this is nandkishor";
-console.log(myname);
+  let count: number = 0;
 
-document.addEventListener("DOMContentLoaded", () => {
-  const counter = document.querySelector<HTMLElement>(".counter");
-  const increament = document.querySelector<HTMLButtonElement>(".increment");
-  const decreament = document.querySelector<HTMLButtonElement>(".decrement");
-  const incrementBynum = document.getElementById("incrementbtn") as HTMLInputElement;
-  const reset = document.querySelector<HTMLButtonElement>("reset");
+  incrementBynum.addEventListener("input", (e: Event) => {
+    let target = e.target as HTMLInputElement;
+    const result: number = parseInt(target.value) || 1;
+    counter.innerHTML = String(result + count);
+  });
 
-if (increament && counter){
-    increament.addEventListener('click',()=>{
-    })
-}
+  increament.addEventListener("click", function () {
+    counter.innerHTML = String(++count);
+  });
 
+  decreament.addEventListener("click", () => {
+    if (count <= 0) return 1;
+    counter.innerText = String(--count);
+  });
 
-
-
-
-
+  reset.addEventListener("click", () => {
+    counter.innerText = String(0);
+    count = 0;
+  });
 });
